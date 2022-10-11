@@ -1,0 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400&family=Poppins:wght@200;300;400;500&display=swap");
+
+body{
+    font-family: 'Inter', sans-serif;
+    font-family: 'Poppins', sans-serif;
+}
+
+.intro-body{
+    font-weight: 500;
+}
