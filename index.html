@@ -18,7 +18,7 @@
   </head>
   <body>
     <header>
-      <img class="logo" src="images/logo.png" alt="logo">
+      <img class="logo" src="images/logo.png" alt="logo" />
       <nav>
         <ul class="nav_links">
           <li><a href="#">Skills</a></li>
@@ -27,7 +27,7 @@
           <li><a href="#">About</a></li>
         </ul>
       </nav>
-      <a class="cta" href="#"><button>Contact</button></a> 
+      <a class="cta" href="#"><button>Contact</button></a>
     </header>
     <div class="banner">
       <p class="banner-text">* Site Under Construction*</p>
@@ -45,6 +45,7 @@
 
     <div class="skill-set">
       <h1>SKILLS</h1>
+      <p>Here are some of my tech stack skills.</p>
       <!-- row 1 -->
       <div class="row">
         <div class="col html-card">
@@ -77,19 +78,49 @@
       </div>
     </div>
 
-    <div class="Projects">
+    <div class="projects">
+      <h1>PROJECTS</h1>
+      These are some of the projects I've worked on in the past.
     </div>
 
-    <div class="Services">
+    <div class="services">
+      <h1>SERVICES</h1>
+      <p>Cost analysis of the services.</p>
     </div>
 
-    <div class="About">  
-
+    <div class="about">
+      <h1>ABOUT</h1>
+      <p>
+        I am a freelance web developer. With 2 years of experience and a
+        concrete knowledge of the MERN stack (MongoDB, Express, React, NodeJS).
+      </p>
     </div>
 
-    <div class="Contact">
-    
+    <div class="contact">
+      <h1>CONTACT</h1>
+      <div class="container">
+        <form action="/action_page.php">
 
+          <div>
+            <input type="text" id="fname" name="" required>
+            <span class="contact-label">Your Name</span>
+            <i></i>
+          </div>
+
+          <div><input type="text" id="fname" name="" required>
+            <span class="contact-label">Your Email</span>
+          </div>
+          <div>
+            <input type="text" id="lname" name="subject" required>
+            <span class="contact-label">Your Subject</span>
+          </div>
+          <div><textarea id="subject" name="subject" placehold  style="height:200px" required></textarea>
+    <span class="contact-label">Your Message</span>
+    <br>
+    <input class="contact-box" type="submit" value="Submit">
+  </div>
+          </form>
+      </div>
     </div>
   </body>
 </html>
