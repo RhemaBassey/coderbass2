@@ -135,6 +135,7 @@ button:hover{
 
 .contact{
   padding: 50px 50px;
+
   /* text-align: center;
   align-items: center; */
 }
@@ -223,6 +224,7 @@ input[type=submit] {
   border: none;
   border-radius: 4px;
   cursor: pointer;
+  margin-left: 50% ;
 }
 
 input[type=submit]:hover {
@@ -234,12 +236,16 @@ input[type=submit]:hover {
   /* background-color: #f2f2f2; */
   padding: 20px;
   width: 50%;
+  
+  margin-left: 18vw;
 }
 
 .contact span{
   position: absolute;
   left: 82px; 
   margin: -34px -2px;
+
+  margin-left: 18vw;
   color: rgba(255, 255, 255, 0.5);
   pointer-events: none;
   letter-spacing: 0.1em;
@@ -254,21 +260,32 @@ input[type=submit]:hover {
   letter-spacing: 0.1em;
 } */
 
-.contact input:valid ~ span,
-.contact input:focus ~ span{
-  color: #2196f3;  
+/* .contact input:focus ~ span, */
+.contact input:valid ~ span{
   transform: translateY(-20px);
   font-size: 0.8em;
 }
 
-
- textarea:valid ~ span, 
- textarea:focus ~ span
+.contact input:focus ~ span
 {
   color: #2196f3;  
+}
+
+
+
+ .txta span
+{
+ 
   transform: translateY(-75px);
   font-size: 0.8em;
 }
+
+
+textarea:focus ~ span
+{
+  color: #2196f3; 
+}
+
 .contact i{
   position: absolute;
   width: 50vw;
@@ -289,8 +306,9 @@ input[type=submit]:hover {
   transition: 0.5s; 
 }
 
-.contact input:valid ~ i::before,
-.contact input:focus ~ i::before
+/* .contact input:valid ~ i::before, */
+.contact input:focus ~ i::before,
+textarea:focus ~ i::before
 
 {
   left: 0;
