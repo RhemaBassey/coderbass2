@@ -1,0 +1,29 @@
+Read Me: A program to scrape websites
+
+- To change a package version. Write the desired version in package.json and then run 'npm i'
+- To change node version use 'nvm instal v<version e.g 0.10.31>', this uses the new version as the default
+- To switch the node version use 'nvm use <version>'
+- The cheerio package is a fast, flexible & lean implementation of core jQuery designed specifically for the server.
+
+Resources:
+Build a Web Scraper (super simple!) - https://www.youtube.com/watch?v=-3lqUHeZs_0
+
+
+Uploading to MongoDB:
+(Project > Database > Collection > Individual Data Entry)
+> npm install the mongoose package
+> mongoose = require("mongoose);
+> set the connection: mongoose.connect("mongodb+srv://admin-guru:<password>@cluster0.il4j8.mongodb.net/?retryWrites=true&w=majority", {useNewUrlParser: true, useUnifiedTopology: true});
+> Declare the schema (the form which data in the collection will take) e.g:
+     //Schema
+    const itemSchema = {
+        title: String,
+        url: String
+    }
+> Declare a collection e.g: 
+    // Creating a collection in a database, (schema can be inserted in the right hand side, while the LHS is for the collection name which will be pluralized by MonngoDB)
+    const Item = mongoose.model("info", itemSchema)
+> Create a data Entry and save that data entry e.g:
+    const item1 = new Item({title: "blah blah blah , testing....", url:"www.blahblahtest.com"})
+    item1.save() 
+> run the server 
