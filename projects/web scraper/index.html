@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Getting Data from Backend to Frontend</title>
+  </head>
+  <body>
+    <header class="headz">
+      <a class="link-logo" href="../../index.html"
+        ><img
+          class="logo"
+          src="../../images/logo.png"
+          alt="logo"
+          href="../../index.html"
+      /></a>
+      <nav>
+        <ul class="nav_links">
+          <li><a href="../../index.html#skills">Skills</a></li>
+          <li><a href="../../index.html#projects">Projects</a></li>
+          <li><a href="../../index.html#services">Services</a></li>
+          <li><a href="../../index.html#about">About</a></li>
+        </ul>
+      </nav>
+      <a class="cta" href="../../index.html#contact"
+        ><button class="header-button">Contact</button></a
+      >
+
+      <style>
+        @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400&family=Poppins:wght@200;300;400;500&display=swap");
+
+        * {
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+          font-family: "Inter", sans-serif;
+          font-family: "Poppins", sans-serif;
+        }
+
+        header {
+          display: flex;
+          /* justify-content: space-between; */ /*puts header links in the middle*/
+          justify-content: flex-end; /*puts content to the right*/
+          align-items: center;
+          padding: 30px 10%;
+
+          /* 
+
+  display: flex;
+  justify-content: flex-end; 
+  align-items: center;
+  padding: 30px 10%;
+  margin-left: -8px;
+  margin-right: -8px;
+
+  padding: -10px;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+  font-family: "Poppins", sans-serif;
+ */
+        }
+        .link-logo {
+          height: 0px;
+          margin-top: -38px;
+          margin-left: 0px;
+          padding-bottom: 0px;
+          margin-right: auto; /*puts logo to the left, due to 'justify-content: flex-end'*/
+        }
+        .logo {
+          cursor: pointer;
+          width: 30px;
+          border-radius: 10%;
+          margin-right: auto; /*puts logo to the left, due to 'justify-content: flex-end'*/
+        }
+
+        .nav_links {
+          list-style: none;
+        }
+
+        .nav_links li {
+          display: inline-block;
+          padding: 0px 20px;
+        }
+
+        .nav_links li a {
+          transition: all 0.3s ease 0s;
+        }
+
+        /* .nav_links li a:hover {
+          color: #0088a9;
+        } */
+
+        li,
+        a,
+        .header-button {
+          color: #edf0f1;
+          text-decoration: none;
+        }
+
+        header {
+          background-color: #24252a;
+
+          display: flex;
+          /* justify-content: space-between; */ /*puts header links in the middle*/
+          justify-content: flex-end; /*puts content to the right*/
+          align-items: center;
+          padding: 30px 10%;
+        }
+
+        .header-button {
+          margin-left: 20px;
+          padding: 9px 25px;
+          background-color: rgba(0, 135, 169, 1);
+          border: none;
+          border-radius: 50px;
+          cursor: pointer;
+          transition: all 0.3s ease 0s;
+        }
+
+        .header-button:hover {
+          background-color: rgba(0, 136, 169, 0.8);
+        }
+      </style>
+    </header>
+    <!-- <label>Enter URL:</label></br>
+      <input type="text" id="myText"></br>
+      <button type="button" id="myButton">submit</button> -->
+
+    <form action="" id="form" onsubmit="Console(event)">
+      <input type="text" name="data" id="data" />
+      <button type="submit">Submit</button>
+    </form>
+
+    <script src="index.js"></script>
+    <div id="feed"></div>
+    <script src="src/app.js"></script>
+  </body>
+</html>

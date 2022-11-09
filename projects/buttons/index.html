@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="styles.css" />
+
+    <title>Web Components: Buttons</title>
+  </head>
+  <body>
+    <header class="headz">
+      <a class="link-logo" href="../../index.html"
+        ><img
+          class="logo"
+          src="../../images/logo.png"
+          alt="logo"
+          href="../../index.html"
+      /></a>
+      <nav>
+        <ul class="nav_links">
+          <li><a href="../../index.html#skills">Skills</a></li>
+          <li><a href="../../index.html#projects">Projects</a></li>
+          <li><a href="../../index.html#services">Services</a></li>
+          <li><a href="../../index.html#about">About</a></li>
+        </ul>
+      </nav>
+      <a class="cta" href="../../index.html#contact"
+        ><button class="header-button">Contact</button></a
+      >
+
+      <style>
+        @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400&family=Poppins:wght@200;300;400;500&display=swap");
+
+        * {
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+          font-family: "Inter", sans-serif;
+          font-family: "Poppins", sans-serif;
+        }
+
+        header {
+          display: flex;
+          /* justify-content: space-between; */ /*puts header links in the middle*/
+          justify-content: flex-end; /*puts content to the right*/
+          align-items: center;
+          padding: 30px 10%;
+
+          /* 
+
+  display: flex;
+  justify-content: flex-end; 
+  align-items: center;
+  padding: 30px 10%;
+  margin-left: -8px;
+  margin-right: -8px;
+
+  padding: -10px;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+  font-family: "Poppins", sans-serif;
+ */
+        }
+        .link-logo {
+          height: 0px;
+          margin-top: -38px;
+          margin-left: 0px;
+          padding-bottom: 0px;
+          margin-right: auto; /*puts logo to the left, due to 'justify-content: flex-end'*/
+        }
+        .logo {
+          cursor: pointer;
+          width: 30px;
+          border-radius: 10%;
+          margin-right: auto; /*puts logo to the left, due to 'justify-content: flex-end'*/
+        }
+
+        .nav_links {
+          list-style: none;
+        }
+
+        .nav_links li {
+          display: inline-block;
+          padding: 0px 20px;
+        }
+
+        .nav_links li a {
+          transition: all 0.3s ease 0s;
+        }
+
+        /* .nav_links li a:hover {
+          color: #0088a9;
+        } */
+
+        li,
+        a,
+        .header-button {
+          color: #edf0f1;
+          text-decoration: none;
+        }
+
+        header {
+          background-color: #24252a;
+
+          display: flex;
+          /* justify-content: space-between; */ /*puts header links in the middle*/
+          justify-content: flex-end; /*puts content to the right*/
+          align-items: center;
+          padding: 30px 10%;
+        }
+
+        .header-button {
+          margin-left: 20px;
+          padding: 9px 25px;
+          background-color: rgba(0, 135, 169, 1);
+          border: none;
+          border-radius: 50px;
+          cursor: pointer;
+          transition: all 0.3s ease 0s;
+        }
+
+        .header-button:hover {
+          background-color: rgba(0, 136, 169, 0.8);
+        }
+      </style>
+    </header>
+
+    <div>
+      <p>Defualt Button:</p>
+      <button>Default Button</button>
+    </div>
+    <div>
+      <p>Basic Buttons:</p>
+
+      <button class="btn-basic basic1">Click Me</button>
+      <button class="btn-basic basic2">Click Me</button>
+      <button class="btn-basic basic3">Click Me</button>
+      <button class="btn-basic basic4">Click Me</button>
+      <button class="btn-basic basic5">Click Me</button>
+    </div>
+
+    <p>Rounded Buttons:</p>
+    <button class="btn-basic rounded1">4px</button>
+    <button class="btn-basic rounded2">9px</button>
+    <button class="btn-basic rounded3">16px</button>
+    <button class="btn-basic rounded4">25px</button>
+    <button class="btn-basic rounded5">50%</button>
+
+    <p>Colored Border Buttons:</p>
+    <button class="btn-basic colored-border1">Red</button>
+    <button class="btn-basic colored-border2">Green</button>
+    <button class="btn-basic colored-border3">Blue</button>
+    <button class="btn-basic colored-border4">Gray</button>
+    <button class="btn-basic colored-border5">Black</button>
+
+    <p>Hoverable Buttons:</p>
+    <button class="btn-basic hoverable1">Blank to Filled</button>
+    <button class="btn-basic hoverable2">Filled to Blank</button>
+    <button class="btn-basic hoverable3">Fade Color</button>
+    <button class="btn-basic hoverable4">Strengthen Color</button>
+    <button class="btn-basic hoverable5">Alter Color</button>
+
+    <p>Buttons Widths:</p>
+    <button class="btn-basic width1">></button><br />
+    <button class="btn-basic width2">250px</button><br />
+    <button class="btn-basic width3">50%</button><br />
+    <button class="btn-basic width4">100%</button><br />
+
+    <div>
+      <p>Button Groups (Horizontal):</p>
+      <button class="btn-basic horizontal">Button</button>
+      <button class="btn-basic horizontal">Button</button>
+      <button class="btn-basic horizontal">Button</button>
+      <button class="btn-basic horizontal">Button</button>
+    </div>
+    <!-- Leaves space between both Horizontal Button Groups, due to the CSS effect of float -->
+    <br style="clear: both" />
+    <br />
+
+    <div>
+      <!-- Needs to be wrapped in div for .horizontal-border:not(:last-child) to work -->
+      <div>
+        <p>Bordered Button Groups (Horizontal & Vertical):</p>
+        <button class="btn-basic horizontal-border">Button</button>
+        <button class="btn-basic horizontal-border">Button</button>
+        <button class="btn-basic horizontal-border">Button</button>
+        <button class="btn-basic horizontal-border">Button</button>
+      </div>
+      <br style="clear: both" />
+      <br />
+
+      <div>
+        <button class="btn-basic vertical-border">Button</button>
+        <button class="btn-basic vertical-border">Button</button>
+        <button class="btn-basic vertical-border">Button</button>
+        <button class="btn-basic vertical-border">Button</button>
+      </div>
+    </div>
+
+    <div>
+      <p>Disabled Button:</p>
+      <button class="btn-basic">Normal Button</button>
+      <button class="btn-basic disabled">Disabled Button</button>
+    </div>
+
+    <div>
+      <p>Shadow Buttons:</p>
+      <button class="btn-basic shadow1">Shadow Button</button>
+      <button class="btn-basic shadow2">Shadow on Hover</button>
+      <button class="btn-basic shadow3">
+        Colored Shadows on Hover & Click
+      </button>
+    </div>
+
+    <div>
+      <p>Animated Buttons:</p>
+      <button class="btn-basic animated1">3D Button</button>
+      <button class="btn-basic animated2"><span>Hover</span></button>
+    </div>
+
+    <div class="image-container">
+      <p>Button on Image:</p>
+      <img
+        src="https://www.w3schools.com/css/img_lights.jpg"
+        alt="snow"
+        style="width: 100%"
+      />
+
+      <button class="btn-basic image1">3D Button</button>
+    </div>
+  </body>
+</html>
