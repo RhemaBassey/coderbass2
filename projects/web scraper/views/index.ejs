@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Web Scraping</title>
+    <link rel="stylesheet" href="../../../css/web-scraper.css" />
+    <!-- <link rel="stylesheet" href="styles"> -->
+  </head>
+  <body>
+    <form action="/projects/web_scraper/send-url" method="POST">
+      <input type="text" placeholder="Enter Tag..." name="tag" />
+      <input type="text" placeholder="Enter URL..." name="url" />
+      <input type="submit" value="Send" />
+    </form>
+
+    <div class="container">
+      <p class="value">
+        <!-- We use '- title' in order to remove unecessary info such as spacing characters -->
+        <% if (value !='') { %> <%- title %> : <%= value %>/10 <% } %>
+
+      </p>
+    </div>
+  </body>
+</html>
