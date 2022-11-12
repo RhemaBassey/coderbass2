@@ -16,6 +16,11 @@ app.get("/", (req, res) => {
   res.sendFile(__dirname + "/index.html");
 });
 
+// PROJECT: Blue Pips World
+app.get("/projects/blue_pips_world", (req, res) => {
+  res.sendFile(path.join(publicPath, '/blue-pips-world/index.html')); // try to get a all projects in public folder, rather than project+public folders
+});
+
 // PROJECT: Buttons
 app.get("/projects/buttons", (req, res) => {
   res.sendFile(__dirname + "/projects/buttons/index.html");

@@ -8,16 +8,18 @@
   font-family: "Poppins", sans-serif;
 }
 
-html{
+html {
   scroll-behavior: smooth;
 }
 
-body{
-  background-color: #24252A;
+body {
+  background-color: #24252a;
   color: #edf0f1;
 }
 
-li, a, button{
+li,
+a,
+button {
   color: #edf0f1;
   text-decoration: none;
 }
@@ -28,49 +30,52 @@ header {
   justify-content: flex-end; /*puts content to the right*/
   align-items: center;
   padding: 30px 10%;
-} 
+}
 
-.logo{
-  cursor: pointer;
-  width: 30px;
-  border-radius: 10%;
+.logo {
+  height: 0;
+  margin-top: -50px;
   margin-right: auto; /*puts logo to the left, due to 'justify-content: flex-end'*/
 }
 
-.nav_links{
+.logo img {
+  margin-right: auto;
+  width: 40px;
+  border-radius: 10%;
+}
+
+.nav_links {
   list-style: none;
 }
 
-.nav_links li{
+.nav_links li {
   display: inline-block;
   padding: 0px 20px;
 }
 
-.nav_links li a{
-  transition: all 0.3s ease 0s; 
+.nav_links li a {
+  transition: all 0.3s ease 0s;
 }
 
-
-.nav_links li a:hover{
-  color: #0088a9; 
+.nav_links li a:hover {
+  color: #0088a9;
 }
 
 button {
   margin-left: 20px;
   padding: 9px 25px;
-  background-color: rgba(0,135,169,1);
+  background-color: rgba(0, 135, 169, 1);
   border: none;
   border-radius: 50px;
   cursor: pointer;
-  transition: all 0.3s ease 0s
+  transition: all 0.3s ease 0s;
 }
 
-button:hover{
-  background-color: rgba(0,136,169,0.8);
-
+button:hover {
+  background-color: rgba(0, 136, 169, 0.8);
 }
 
-.about{
+.about {
   padding: 50px 50px;
   text-align: center;
   align-items: center;
@@ -79,7 +84,7 @@ button:hover{
 .banner {
   height: 400px;
   display: flex;
-  background-color: rgb(46, 76, 209, 0.8);  
+  background-color: rgb(46, 76, 209, 0.8);
 
   align-items: center;
   justify-content: center;
@@ -128,73 +133,96 @@ button:hover{
   padding: 30px 0px;
 }
 
-.col:hover{
-    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
+.col:hover {
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
     0 17px 50px 0 rgba(0, 0, 0, 0.19);
 }
 
-.contact{
+.contact {
   padding: 50px 50px;
 
   /* text-align: center;
   align-items: center; */
 }
 
-.contact h1{
+.contact h1 {
   text-align: center;
 }
 
 .html-card:hover {
-  color: #F06529;
+  color: #f06529;
 }
 
-.css-card:hover{
-    color: #2965f1;
+.css-card:hover {
+  color: #2965f1;
 }
 
-.javascript-card:hover{
-    color: #F0DB4F;
+.javascript-card:hover {
+  color: #f0db4f;
 }
 
-.react-card:hover{
-    color: #61DBFB;
+.react-card:hover {
+  color: #61dbfb;
 }
 
-.nodejs-card:hover{
-    color: #68A063;
+.nodejs-card:hover {
+  color: #68a063;
 }
 
-.projects{
+.projects {
   padding: 50px 50px;
   text-align: center;
   align-items: center;
 }
 
-.projects a{
-  color:#04AA6D;
+.projects a {
+  color: #04aa6d;
 }
 
-.projects a:hover{
-  color:#20eea3;
+.projects a:hover {
+  color: #20eea3;
 }
 
-.python-card:hover{
-    /* color: 	#646464; */
-    color: #4B8BBE
+/* for testimony images */
+.projects-gallery {
+  /* position: absolute; */
+  /* justify-content: center;
+  align-items: center; */
+  margin-top: 50px;
+  width: 100vw;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 400px));
+  column-gap: 25px;
+  row-gap: 30px;
 }
 
+.projects-gallery img {
+  /* margin-left: 20px; */
+  border-radius: 15px;
+  width: 350px;
+  height: 300px;
+  object-position: center;
+  border: #04aa6d 1.5px solid;
+}
 
-.services{
+.projects-gallery img:hover {
+  border: #20eea3 3px solid;
+}
+
+.python-card:hover {
+  /* color: 	#646464; */
+  color: #4b8bbe;
+}
+
+.services {
   padding: 50px 50px;
   text-align: center;
   align-items: center;
 }
 
-
-
-
-
-input[type=text], select, textarea {
+input[type="text"],
+select,
+textarea {
   width: 100%;
   padding: 10px;
   border: none;
@@ -215,20 +243,19 @@ input[type=text], select, textarea {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  gap:30px;
+  gap: 30px;
   color: white;
   box-shadow: none;
   font-size: 1em;
   letter-spacing: 0.1em;
 }
 
-textarea{
-
+textarea {
   width: 50vw;
 }
 
-input[type=submit] {
-  background-color: #04AA6D;
+input[type="submit"] {
+  background-color: #04aa6d;
   color: white;
   padding: 12px 20px;
   border: none;
@@ -238,7 +265,7 @@ input[type=submit] {
   margin-left: 23.5vw; /*50%*/
 }
 
-input[type=submit]:hover {
+input[type="submit"]:hover {
   background-color: #45a049;
 }
 
@@ -247,13 +274,13 @@ input[type=submit]:hover {
   /* background-color: #f2f2f2; */
   padding: 20px;
   width: 50%;
-  
+
   margin-left: 18vw;
 }
 
-.contact span{
+.contact span {
   position: absolute;
-  left: 82px; 
+  left: 82px;
   margin: -34px -2px;
 
   margin-left: 18vw;
@@ -272,32 +299,25 @@ input[type=submit]:hover {
 } */
 
 /* .contact input:focus ~ span, */
-.contact input:valid ~ span{
+.contact input:valid ~ span {
   transform: translateY(-20px);
   font-size: 0.8em;
 }
 
-.contact input:focus ~ span
-{
-  color: #2196f3;  
+.contact input:focus ~ span {
+  color: #2196f3;
 }
 
-
-
- .txta span
-{
- 
+.txta span {
   transform: translateY(-75px);
   font-size: 0.8em;
 }
 
-
-textarea:focus ~ span
-{
-  color: #2196f3; 
+textarea:focus ~ span {
+  color: #2196f3;
 }
 
-.contact i{
+.contact i {
   position: absolute;
   width: 50vw;
   height: 3px;
@@ -305,34 +325,28 @@ textarea:focus ~ span
   overflow: hidden;
 }
 
-.contact i::before
-{
-  content: '';
+.contact i::before {
+  content: "";
   position: absolute;
   left: -100%;
   width: 100%;
   height: 100%;
   background: linear-gradient(90deg, #ff1b69, #ff0, #2196f3, #9c27b0, #ff1b69);
   animation: animate 2s linear infinite;
-  transition: 0.5s; 
+  transition: 0.5s;
 }
 
 /* .contact input:valid ~ i::before, */
 .contact input:focus ~ i::before,
-textarea:focus ~ i::before
-
-{
+textarea:focus ~ i::before {
   left: 0;
 }
 
-@keyframes animate
-{
-  0%
-  {
+@keyframes animate {
+  0% {
     background-position-x: 0;
   }
-  100%
-  {
+  100% {
     background-position-x: 100vw;
   }
 }
