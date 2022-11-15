@@ -28,8 +28,8 @@ app.get("/projects/buttons", (req, res) => {
 });
 
 // PROJECT: Web Scraper
-app.get("/projects/web_scraper", (req, res) => {
-  res.render(__dirname + "/projects/web scraper/views/index.ejs", {
+app.get("/projects/web-scraper", (req, res) => {
+  res.render(__dirname + "/projects/web-scraper/views/index.ejs", {
     title: "",
     value: "",
     tag1: "",

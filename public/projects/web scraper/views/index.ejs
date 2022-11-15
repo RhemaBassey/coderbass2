@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Web Scraping</title>
+    <link rel="stylesheet" href="../../../css/web-scraper.css" />
+    <!-- <link rel="stylesheet" href="styles"> -->
+  </head>
+  <body>
+    <div class="container">
+      <p class="value" style="margin-bottom: -60px">WEB SCRAPER</p>
+    </div>
+    <form id="myAnchor" action="/projects/web_scraper/send-url" method="POST">
+      <input
+        default="hey"
+        type="text"
+        placeholder="Enter tag 1 (ex: h1)"
+        name="tag1"
+        value= "<%= tag1 %>"
+      
+      />
+      <input
+        type="text"
+        placeholder="Enter tag 2 (ex: span[id='summary'])"
+        name="tag2"
+        value= "<%= tag2 %>"
+      />
+      <input type="text" placeholder="Enter URL..." name="url" value= "<%= url %>"/>
+      <input type="submit" value="Send" />
+    </form>
+
+    <div class="container">
+      <p class="value">
+        <!-- We use '- title' in order to remove unecessary info such as spacing characters -->
+        <% if (value !='') { %> <%- title %> , <%= value %> <br />
+        <% } %>
+      </p>
+    </div>
+
+
+  </body>
+</html>
