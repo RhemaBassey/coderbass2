@@ -1,25 +1,9 @@
-// import React from 'react';
-// import ReactDOM from 'react-dom/client';
-// import '../app2/src/index.css';
-// import App from '../app2/src/App.js';
-// import reportWebVitals from '../app2/src/reportWebVitals.js';
-// const root = ReactDOM.createRoot(document.getElementById('root'));
-// root.render(
-//   <React.StrictMode>
-//     <App />
-//   </React.StrictMode>
-// );
-
-// // If you want to start measuring performance in your app, pass a function
-// // to log results (for example: reportWebVitals(console.log))
-// // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-// reportWebVitals();
-
 import express from "express";
 import got from "got";
 import bodyParser from "body-parser";
 import cheerio from "cheerio";
 import * as url from "url";
+import path from "path"
 
 const app = express();
 const __filename = url.fileURLToPath(import.meta.url);
@@ -27,23 +11,41 @@ const __dirname = url.fileURLToPath(new URL(".", import.meta.url));
 
 const urlEncodedParser = bodyParser.urlencoded({ extended: false });
 
+// const publicPath = path.join(__dirname, '..');
+const publicProject = path.join(__dirname,"..","public/projects");
+
 const PORT = process.env.PORT || 4000;
+
 app.set("view engine", "ejs");
-app.use(express.static("public"));
+
+// used '/public' as a prefix, so I can distinguish between multiple public files. 
+// NOTE: without this prefix I can have multiple public files, as other public files will be ignored and only one public file would be used as the default
+// NOTE: Put the prefix in the HTML links so that it will use the correct public folder... or file
+app.use('/public', express.static(path.join(__dirname,'..','public')));
+
+// // used '/build' as a prefix, so I can distinguish between multiple public files
+// app.use('/forex-site/build',express.static(publicPath));
+// app.use( express.static(publicPath));
+
+// app.use(express.static(__dirname));
+
+// app.use(express.static(path.join(__dirname, '..', 'public/projects/app2/build')));
+
 
 app.get("/", (req, res) => {
   res.sendFile(__dirname + "/index.html");
 });
 
+
+
 // PROJECT: Blue Pips World
-app.get("/projects/blue_pips_world", (req, res) => {
-  // res.sendFile(path.join(publicPath, '/blue-pips-world/index.html')); // try to get a all projects in public folder, rather than project+public folders
-  res.sendFile(__dirname + "/projects/blue-pips-world/index.html");
+app.get("/projects/app2", (req, res) => {
+  res.sendFile(path.join(publicProject,"app2/build/index.html"));
 });
 
 // PROJECT: Buttons
 app.get("/projects/buttons", (req, res) => {
-  res.sendFile(__dirname + "/projects/buttons/index.html");
+  res.sendFile(path.join(__dirname,'..',"public/projects/buttons/index.html"));
 });
 
 // PROJECT: Web Scraper
