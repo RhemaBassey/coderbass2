@@ -194,6 +194,7 @@ button:hover {
   grid-template-columns: repeat(auto-fill, minmax(400px, 400px));
   column-gap: 25px;
   row-gap: 30px;
+  align-items: center;
 }
 
 .projects-gallery img {
